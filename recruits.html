@@ -132,6 +132,57 @@
             .newFooter {
                 background-color: black;
             }
+            .fullscreen-bg {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                overflow: hidden;
+                z-index: -100;
+                text-align: center;
+            }
+            .fullscreen-bg__video {
+                width: 100%;
+                text-align: center;
+            }
+            .overlay {
+                text-align: center;
+                position: absolute;
+                top:270px;
+                z-index:1;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media (max-width: 767px) {
+                .headerTitle {
+                    font-size: 40;
+                    text-shadow:
+                        -1px -1px 0 #000,
+                        1px -1px 0 #000,
+                        -1px 1px 0 #000,
+                        1px 1px 0 #000;
+                }
+                .headerLyl {
+                    font-size: 40;
+                    text-shadow:
+                        -1px -1px 0 #F00,
+                        1px -1px 0 #F00,
+                        -1px 1px 0 #F00,
+                        1px 1px 0 #F00;
+                }
+                .overlay {
+                    text-align: center;
+                    position: absolute;
+                    top:430px;
+                    z-index:1;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
         </style>
     </head>
     
@@ -154,8 +205,11 @@
                 </nav>
             </div>
         </div>
-        <div class = "parallax">
-            <div class = "titleMain">
+        <div class="fullscreen-bg">
+            <video loop muted autoplay poster="img/r6Background.jpg" class="fullscreen-bg__video">
+                <source src="r6Trimmed.mp4" type="video/mp4">
+            </video>
+            <div class="overlay">
                 <span class = "headerTitle">WE ARE </span><span class = "headerLyl">ANTI-LYL.</span>
             </div>
         </div>
